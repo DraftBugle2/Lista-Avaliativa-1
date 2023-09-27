@@ -4,7 +4,6 @@ int main(){
 
     int X;
 
-    printf("Digite um ano igual ou entre 1800 e 2022:\n");
     scanf("%d", &X);
 
     if(X > 2022){
