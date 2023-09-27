@@ -1,24 +1,33 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(){
 
-    int n, x;
+    int N, X;
 
-    scanf("%d", &n);
-    printf("senha cadastrada: %d\n", n);
+    do{
+        printf("Cadastre uma senha de 4 digitos:\n");
+        scanf("%d", &N);
 
-    scanf("%d", &x);
-
-    while(x != n){
+        if(N > 9999 || N < 1000){
         printf("senha invalida!\n");
-        scanf("%d", &x);
+        }
+
+    }while(N > 9999 || N < 1000);
+
+    if(N <= 9999 || N >= 1000){
+    printf("senha cadastrada: %d\n", N);
     }
 
-    if(x == n){
+    scanf("%d", &X);
+
+    while(X != N){
+        printf("senha invalida!\n");
+        scanf("%d", &X);
+    }
+
+    if(X == N){
         printf("senha valida!\n");
     }
 
     return 0;
 }
-
